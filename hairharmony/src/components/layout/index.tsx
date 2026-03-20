@@ -79,6 +79,11 @@ export const Navbar: React.FC<NavbarProps> = ({
     <nav style={navStyle}>
       <div style={innerStyle}>
         <a href="#" style={brandStyle}>
+          <img 
+            src="/favicon.ico" 
+            alt="Hair Harmony Logo" 
+            style={{ width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle' }}
+          />
           Hair <em style={{ color: colors.primary, fontStyle: 'italic' }}>Harmony</em>
         </a>
         {/* nav-links-desktop: CSS class hides this below 900px */}
