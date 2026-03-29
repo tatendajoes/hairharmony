@@ -204,4 +204,5 @@ body {
 }
 @media (max-width: 600px) {
   .steps-grid { grid-template-columns: 1fr; }
+  .brand-logo-icon { display: none; }
 }

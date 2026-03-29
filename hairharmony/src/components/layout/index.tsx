@@ -82,6 +82,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <img 
             src="/favicon.ico" 
             alt="Hair Harmony Logo" 
+            className="brand-logo-icon"
             style={{ width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle' }}
           />
           Hair <em style={{ color: colors.primary, fontStyle: 'italic' }}>Harmony</em>
