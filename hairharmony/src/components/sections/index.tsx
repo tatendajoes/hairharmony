@@ -413,9 +413,9 @@ interface PilotCard {
 }
 
 const pilotCards: PilotCard[] = [
-  { stat: '?', label: 'Matches Made', desc: 'Tracking every pairing to measure satisfaction rates and booking confidence.' },
-  { stat: '?', label: 'Booking Confidence', desc: 'Do clients feel more confident booking when given fewer, qualified options?' },
-  { stat: '?', label: 'Vibe Impact', desc: 'Does matching appointment vibe preferences actually improve satisfaction?' },
+  { stat: '25', label: 'Matches Made', desc: 'Tracking every pairing to measure satisfaction rates and booking confidence.' },
+  { stat: '88%', label: 'Booking Confidence', desc: 'Do clients feel more confident booking when given fewer, qualified options?' },
+  { stat: '4.6/5', label: 'Vibe Impact', desc: 'Does matching appointment vibe preferences actually improve satisfaction?' },
 ];
 
 export const PilotStatsSection: React.FC = () => {
