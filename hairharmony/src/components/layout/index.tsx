@@ -1,4 +1,5 @@
 import React, { type CSSProperties } from 'react';
+import Image from 'next/image';
 import { colors, fonts, radii, zIndex } from '../../tokens';
 import { Button } from '../primitives';
 
@@ -79,11 +80,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     <nav style={navStyle}>
       <div style={innerStyle}>
         <a href="#" style={brandStyle}>
-          <img 
-            src="/favicon.ico" 
-            alt="Hair Harmony Logo" 
+          <Image
+            src="/favicon.ico"
+            alt="Hair Harmony Logo"
             className="brand-logo-icon"
-            style={{ width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle' }}
+            width={24}
+            height={24}
+            style={{ marginRight: '8px', verticalAlign: 'middle' }}
           />
           Hair <em style={{ color: colors.primary, fontStyle: 'italic' }}>Harmony</em>
         </a>

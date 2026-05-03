@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { colors, fonts, radii, shadows, fontSizes, spacing } from '../../tokens';
 import { Button, Tag, SectionHeader, ImagePlaceholder } from '../primitives';
 import { IconEdit, IconUserPlus, IconCheckCircle, IconChat, IconCheck, IconX, IconDollar, IconFrown, IconShield, type IconProps } from '../icons';
@@ -56,9 +57,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ heroImage, onClientCli
 
       {/* hero-visual: CSS class handles order:-1 on mobile */}
       <div className="hero-visual" style={{ position: 'relative' }}>
-        <div style={{ borderRadius: radii.xl, overflow: 'hidden', boxShadow: shadows.xl, position: 'relative' }}>
+        <div style={{ borderRadius: radii.xl, overflow: 'hidden', boxShadow: shadows.xl, position: 'relative', aspectRatio: '4/5' }}>
           {heroImage ? (
-            <img src={heroImage} alt="Client with beautifully styled textured hair" style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block' }} />
+            <Image src={heroImage} alt="Client with beautifully styled textured hair" fill priority style={{ objectFit: 'cover' }} />
           ) : (
             <ImagePlaceholder label="Hero Image" note="Diverse client in stylist chair — textured hair, confident expression" aspectRatio="4/5" />
           )}
@@ -218,23 +219,23 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ images = [] }) =
 
         {/* pain-mosaic: CSS class handles grid layout + responsive height */}
         <div className="pain-mosaic reveal">
-          <div style={{ gridRow: '1 / 3', borderRadius: radii.md, overflow: 'hidden' }}>
+          <div style={{ gridRow: '1 / 3', borderRadius: radii.md, overflow: 'hidden', position: 'relative' }}>
             {images[0] ? (
-              <img src={images[0]} alt="Natural hair portrait" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <Image src={images[0]} alt="Natural hair portrait" fill style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Tall portrait" note="Client with natural locs or twists" background="rgba(196,112,74,0.12)" />
             )}
           </div>
-          <div style={{ borderRadius: radii.md, overflow: 'hidden' }}>
+          <div style={{ borderRadius: radii.md, overflow: 'hidden', position: 'relative' }}>
             {images[1] ? (
-              <img src={images[1]} alt="Curly hair texture" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <Image src={images[1]} alt="Curly hair texture" fill style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Curly texture" background="rgba(196,112,74,0.08)" />
             )}
           </div>
-          <div style={{ borderRadius: radii.md, overflow: 'hidden' }}>
+          <div style={{ borderRadius: radii.md, overflow: 'hidden', position: 'relative' }}>
             {images[2] ? (
-              <img src={images[2]} alt="Braids close up" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <Image src={images[2]} alt="Braids close up" fill style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Braids close-up" background="rgba(196,112,74,0.06)" />
             )}
@@ -389,9 +390,9 @@ export const ForStylistsSection: React.FC<ForStylistsSectionProps> = ({ stylistI
         </div>
         {/* stylist-img: CSS class handles order:-1 on mobile */}
         <div className="stylist-img reveal reveal-d2">
-          <div style={{ borderRadius: radii.lg, overflow: 'hidden', boxShadow: shadows.lg }}>
+          <div style={{ borderRadius: radii.lg, overflow: 'hidden', boxShadow: shadows.lg, position: 'relative', aspectRatio: '3/4' }}>
             {stylistImage ? (
-              <img src={stylistImage} alt="Professional stylist at work" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} />
+              <Image src={stylistImage} alt="Professional stylist at work" fill style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Stylist Portrait" note="Professional stylist working on a client — diverse representation" aspectRatio="3/4" />
             )}
