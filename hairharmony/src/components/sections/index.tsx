@@ -59,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ heroImage, onClientCli
       <div className="hero-visual" style={{ position: 'relative' }}>
         <div style={{ borderRadius: radii.xl, overflow: 'hidden', boxShadow: shadows.xl, position: 'relative', aspectRatio: '4/5' }}>
           {heroImage ? (
-            <Image src={heroImage} alt="Client with beautifully styled textured hair" fill priority style={{ objectFit: 'cover' }} />
+            <Image src={heroImage} alt="Client with beautifully styled textured hair" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
           ) : (
             <ImagePlaceholder label="Hero Image" note="Diverse client in stylist chair — textured hair, confident expression" aspectRatio="4/5" />
           )}
@@ -221,21 +221,21 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ images = [] }) =
         <div className="pain-mosaic reveal">
           <div style={{ gridRow: '1 / 3', borderRadius: radii.md, overflow: 'hidden', position: 'relative' }}>
             {images[0] ? (
-              <Image src={images[0]} alt="Natural hair portrait" fill style={{ objectFit: 'cover' }} />
+              <Image src={images[0]} alt="Natural hair portrait" fill sizes="(max-width: 900px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Tall portrait" note="Client with natural locs or twists" background="rgba(196,112,74,0.12)" />
             )}
           </div>
           <div style={{ borderRadius: radii.md, overflow: 'hidden', position: 'relative' }}>
             {images[1] ? (
-              <Image src={images[1]} alt="Curly hair texture" fill style={{ objectFit: 'cover' }} />
+              <Image src={images[1]} alt="Curly hair texture" fill sizes="(max-width: 900px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Curly texture" background="rgba(196,112,74,0.08)" />
             )}
           </div>
           <div style={{ borderRadius: radii.md, overflow: 'hidden', position: 'relative' }}>
             {images[2] ? (
-              <Image src={images[2]} alt="Braids close up" fill style={{ objectFit: 'cover' }} />
+              <Image src={images[2]} alt="Braids close up" fill sizes="(max-width: 900px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Braids close-up" background="rgba(196,112,74,0.06)" />
             )}
@@ -392,7 +392,7 @@ export const ForStylistsSection: React.FC<ForStylistsSectionProps> = ({ stylistI
         <div className="stylist-img reveal reveal-d2">
           <div style={{ borderRadius: radii.lg, overflow: 'hidden', boxShadow: shadows.lg, position: 'relative', aspectRatio: '3/4' }}>
             {stylistImage ? (
-              <Image src={stylistImage} alt="Professional stylist at work" fill style={{ objectFit: 'cover' }} />
+              <Image src={stylistImage} alt="Professional stylist at work" fill sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
             ) : (
               <ImagePlaceholder label="Stylist Portrait" note="Professional stylist working on a client — diverse representation" aspectRatio="3/4" />
             )}
